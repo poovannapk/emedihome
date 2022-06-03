@@ -24,6 +24,6 @@ const Tdata = [
     para: "sunglass",
     desc: "6k orders this week",
   },
-]
+];
 
 export default Tdata

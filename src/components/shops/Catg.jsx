@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const Catg = () => {
   const data = [
@@ -34,7 +34,7 @@ const Catg = () => {
           <h1>Brands </h1>
           <h1>Shops </h1>
         </div>
-        {data.map((value, index) => {
+        {data?.map((value, index) => {
           return (
             <div className='box f_flex' key={index}>
               <img src={value.cateImg} alt='' />

@@ -1,4 +1,4 @@
-const Sdata = {
+const Shopdata = {
   shopItems: [
     {
       id: 7,
@@ -64,5 +64,5 @@ const Sdata = {
       discount: "2",
     },
   ],
-}
-export default Sdata
+};
+export default Shopdata;

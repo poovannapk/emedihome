@@ -6,19 +6,19 @@ import Pages from "./pages/pages";
 import Cart from "./common/cart/cart";
 import Footer from "./common/footer/footer";
 import Data from './components/Data'
-import Sdata from "./components/mainpage/Sdata";
+import Shopdata from "./components/shops/Sdata";
 
 function App() {
 
   const { productItems } = Data
-  const { shopItems } = Sdata
+  const { shopItems } = Shopdata
 
   const [CartItem, setCartItem] = useState([])
 
   const addToCart = (product) => {
-    const productExit = CartItem.find((item) => item.id === product.id)
+    const productExit = CartItem?.find((item) => item.id === product.id)
     if (productExit) {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
+      setCartItem(CartItem?.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
     } else {
       setCartItem([...CartItem, { ...product, qty: 1 }])
     }
@@ -27,9 +27,9 @@ function App() {
   const decreaseQty = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id)
     if (productExit.qty === 1) {
-      setCartItem(CartItem.filter((item) => item.id !== product.id))
+      setCartItem(CartItem?.filter((item) => item.id !== product.id))
     } else {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
+      setCartItem(CartItem?.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
     }
   }
   return (

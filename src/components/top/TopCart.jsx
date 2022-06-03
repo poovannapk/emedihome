@@ -2,7 +2,7 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Tdata from "./Tdata"
+import Tdata from './Tdata'
 
 const TopCart = () => {
   const settings = {
@@ -15,7 +15,7 @@ const TopCart = () => {
   return (
     <>
       <Slider {...settings}>
-        {Tdata.map((value, index) => {
+        {Tdata?.map((value, index) => {
           return (
             <>
               <div className='box product' key={index}>
